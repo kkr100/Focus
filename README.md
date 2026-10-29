@@ -14,6 +14,8 @@ Built with [Expo](https://expo.dev) (SDK 58, React Native, TypeScript).
 - Screen stays awake while the timer runs, and you get a haptic buzz when it finishes
 - Remembers your background, duration and task between launches
 - Keeps correct time when the app is backgrounded
+- **Stats** tab: daily goal ring, sessions and focus time for the day / week / month, a per-day activity chart (this week, last 10 days, this month) and time per task
+- **Settings** tab: default focus length, daily goal, background, keep-screen-on and vibration toggles, and reset statistics
 
 ## Run it
 
@@ -27,7 +29,11 @@ Then scan the QR code with the **Expo Go** app on your phone (iOS or Android).
 ## Project layout
 
 ```
-App.tsx                          Main focus screen
+App.tsx                          Tabs, settings and session history state
+src/screens/FocusScreen.tsx      Timer screen
+src/screens/StatsScreen.tsx      Statistics
+src/screens/SettingsScreen.tsx   Settings
+src/sessions.ts                  Recorded sessions and stats helpers
 src/hooks/useCountdown.ts        Timer logic (timestamp based)
 src/components/DurationPicker.tsx
 src/components/BackgroundPicker.tsx
