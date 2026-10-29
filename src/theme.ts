@@ -31,3 +31,17 @@ export function textColorFor(bg: Background): string {
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   return luminance > 0.6 ? '#111111' : '#FFFFFF';
 }
+
+// Light, card-based palette for the Stats and Settings pages.
+export const ui = {
+  bg: '#F2F2F7',
+  card: '#FFFFFF',
+  text: '#111111',
+  muted: '#8E8E93',
+  separator: '#E5E5EA',
+  accent: '#3B82F6',
+  success: '#22C55E',
+  danger: '#EF4444',
+};
+
+export const CHART_COLORS = ['#3B82F6', '#A855F7', '#F97316', '#14B8A6', '#EC4899', '#EAB308'];

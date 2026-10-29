@@ -9,12 +9,18 @@ export type Settings = {
   background: Background;
   durationMin: number;
   task: string;
+  dailyGoal: number;
+  haptics: boolean;
+  keepAwake: boolean;
 };
 
 export const DEFAULT_SETTINGS: Settings = {
   background: DEFAULT_BACKGROUND,
   durationMin: 25,
   task: '',
+  dailyGoal: 4,
+  haptics: true,
+  keepAwake: true,
 };
 
 export async function loadSettings(): Promise<Settings> {
